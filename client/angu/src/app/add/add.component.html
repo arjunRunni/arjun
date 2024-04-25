@@ -1,0 +1,13 @@
+<br>
+<form action="" #form1="ngForm" (ngSubmit)="add(form1.value)">
+    <input type="text" name="name" placeholder="name" ngModel required #name1="ngModel"><br>
+
+    <span> *ngIf="name.touchrd && name1.invalid">Enter valid name</span>
+
+    <input type="number" name="rate" placeholders="RATE" ngModel required><br>
+
+    <input type="submit" value="save" [disabled]="form1.invalid">
+    <hr>
+</form>
+
+
